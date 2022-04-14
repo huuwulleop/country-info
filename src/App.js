@@ -5,10 +5,15 @@ import SearchForm from "./components/SearchForm";
 
 const App = () => {
   const [searchFilter, setSearchFilter] = useState('')
+
+  const changeSearchFilter = (event) => {
+    console.log(event.target.value);
+    setSearchFilter(event.target.value)
+  }
   
   return (
     <div>
-      <SearchForm />
+      <SearchForm searchFilter={searchFilter} changeSearchFilter={changeSearchFilter} />
     </div>
   )
 }

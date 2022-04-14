@@ -1,11 +1,11 @@
 import React from "react";
 
-const SearchForm = ({ changeSearchFilter }) => {
+const SearchForm = ({ searchFilter, changeSearchFilter }) => {
     return (
         <form>
             find countries
             <span> </span>
-            <input placeholder="search countries..." onChange={changeSearchFilter} />
+            <input placeholder="search countries..." value={searchFilter} onChange={changeSearchFilter} />
         </form>
     )
 }
