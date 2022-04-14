@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+// components
+import SearchForm from "./components/SearchForm";
 
 const App = () => {
+  const [searchFilter, setSearchFilter] = useState('')
+  
   return (
-    <div></div>
+    <div>
+      <SearchForm />
+    </div>
   )
 }
 
