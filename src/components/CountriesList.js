@@ -1,5 +1,8 @@
 import React from "react";
 
+// components
+import CountryData from "./CountryData";
+
 const CountriesList = ({ filteredCountries }) => {
     return (
         <ul>
