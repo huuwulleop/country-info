@@ -25,7 +25,7 @@ const App = () => {
   }
 
   const filteredCountries = countries.filter(country => (
-    country.name.common.includes(searchFilter)
+    country.name.common.toLowerCase().includes(searchFilter.toLowerCase())
   ))
 
   console.log(filteredCountries);
@@ -37,7 +37,7 @@ const App = () => {
         ? 'Too many to list'
         : (
           <ul>
-            {filteredCountries.map(fC => <li>{fC.name.common}</li>)}
+            {filteredCountries.map(fC => <li key={fC.ccn3}>{fC.name.common}</li>)}
           </ul>
         )
       }
