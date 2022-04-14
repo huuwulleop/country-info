@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+
+// components
+import CountryData from "./CountryData";
 
 const Country = ({ country }) => {
+    const [hidden, setHidden] = useState(true)
+
+    const toggleShow = () => {
+        setHidden(!hidden)
+    }
+
     return (
         <li>
             {country.name.common}
             <span> </span>
-            <button>show</button>
+            <button onClick={toggleShow}>{hidden ? 'show' : 'hide'}</button>
+            {!hidden && <CountryData country={country} />}
         </li>
     )
 }
